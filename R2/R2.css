@@ -1,8 +1,28 @@
+/*
+* R2 (Responsive Table) CSS Documentation
+* 05/22/2021
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Base Styles
+- Utilities
+- Custom Styles
+    -- table
+    -- table__head
+    -- table__body
+- Animations
+*/
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
 	--light-color: #fff;
 	--dark-border: #d4d7dae0;
 	--dark-color: #f0f0f0;
 }
+/* NOTE
+html is set to 62.5% so that all the REM are based on 10px sizing. So basically 1.6rem = 16px */
 html {
 	box-sizing: border-box;
 	font-size: 62.5%;
@@ -23,12 +43,17 @@ body {
 	height: 100%;
 }
 
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
 	max-width: 1200px;
 	width: 95%;
 	margin: 20rem auto 0 auto;
 }
 
+/* Custom Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* -- Table */
 .table-bg {
     padding: 2rem;
     background-color: var(--light-color);
@@ -56,6 +81,7 @@ th {
 	border: 1px solid var(--dark-border);
 }
 
+/* -- Table__head */
 .table .table__head {
 	font-weight: bold;
 	text-align: left;
@@ -74,6 +100,7 @@ th {
 	cursor: pointer;
 }
 
+/* -- Table__body */
 .table__body tr {
     transition: background-color ease .5s;
 }
@@ -99,6 +126,8 @@ th {
 	}
 }
 
+/* Animations
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 @keyframes fadeIn {
 	from {
 		transform: translateY(-100%);
