@@ -38,6 +38,7 @@ body {
 .table__title {
     margin-bottom: 10px;
 	animation: fadeIn 0.8s forwards;
+	text-align: center;
 }
 
 .table {
@@ -58,7 +59,8 @@ th {
 .table .table__head {
 	font-weight: bold;
 	text-align: left;
-	background-color: var(--light-color);
+	background-color: #111827;
+	color: var(--light-color);
 }
 
 .table .table__head th {
@@ -69,7 +71,6 @@ th {
 
 .table .table__head i {
     display: inline-block;
-    opacity: 0.3;
 	cursor: pointer;
 }
 
