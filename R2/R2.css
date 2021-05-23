@@ -1,8 +1,34 @@
+<<<<<<< HEAD
+=======
+/*
+* R2 (Responsive Table) CSS Documentation
+* 05/22/2021
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Base Styles
+- Utilities
+- Custom Styles
+    -- table
+    -- table__head
+    -- table__body
+- Animations
+*/
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+>>>>>>> develop
 :root {
 	--light-color: #fff;
 	--dark-border: #d4d7dae0;
 	--dark-color: #f0f0f0;
 }
+<<<<<<< HEAD
+=======
+/* NOTE
+html is set to 62.5% so that all the REM are based on 10px sizing. So basically 1.6rem = 16px */
+>>>>>>> develop
 html {
 	box-sizing: border-box;
 	font-size: 62.5%;
@@ -23,12 +49,23 @@ body {
 	height: 100%;
 }
 
+<<<<<<< HEAD
+=======
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+>>>>>>> develop
 .container {
 	max-width: 1200px;
 	width: 95%;
 	margin: 20rem auto 0 auto;
 }
 
+<<<<<<< HEAD
+=======
+/* Custom Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* -- Table */
+>>>>>>> develop
 .table-bg {
     padding: 2rem;
     background-color: var(--light-color);
@@ -56,6 +93,10 @@ th {
 	border: 1px solid var(--dark-border);
 }
 
+<<<<<<< HEAD
+=======
+/* -- Table__head */
+>>>>>>> develop
 .table .table__head {
 	font-weight: bold;
 	text-align: left;
@@ -74,6 +115,10 @@ th {
 	cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+/* -- Table__body */
+>>>>>>> develop
 .table__body tr {
     transition: background-color ease .5s;
 }
@@ -99,6 +144,11 @@ th {
 	}
 }
 
+<<<<<<< HEAD
+=======
+/* Animations
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+>>>>>>> develop
 @keyframes fadeIn {
 	from {
 		transform: translateY(-100%);
