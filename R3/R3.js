@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	const modal = document.querySelector("#modal");
 
 	/**
-	 * This variable stores the video
-	 * @type {HTMLVideoElement}
-	 */
-	const video = document.querySelector("#video");
-
-	/**
 	 * This variable stores the main-image
 	 * @type {HTMLElement}
 	 */
 	const main_image = document.querySelector("#main-image");
+
+	/**
+	 * This variable stores the video
+	 * @type {HTMLVideoElement}
+	 */
+	const video = document.querySelector("#video");
 
 
     /* EventListeners
@@ -46,7 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			e.target.classList.contains("fa-times-circle")
 		) {
 			modal.classList.remove("active");
-			video && video.pause();
+			if (video) {
+				video.currentTime=0;
+				video.pause();
+			}
+
 		}
 	}
 });
