@@ -1,0 +1,183 @@
+/*
+* R4 (Responsive Table with React) CSS Documentation
+* 05/24/2021
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Base Styles
+- Utilities
+- Components
+- Custom Styles
+    -- form
+    -- table
+    -- table__head
+    -- table__body
+- Medias Querys
+- Animations
+*/
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+	--light-color: #fff;
+	--dark-border: #d4d7dae0;
+	--dark-color: #f0f0f0;
+  --error: #ffbfbf;
+  --error-text: #cf0d0d;
+}
+/* NOTE
+html is set to 62.5% so that all the REM are based on 10px sizing. So basically 1.6rem = 16px */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: linear-gradient(to right, #1e3c72, #2a5298);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.4rem;
+	height: 100%;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+	max-width: 1200px;
+	width: 95%;
+	margin: 5rem auto 0 auto;
+}
+
+.error {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--error);
+  color: var(--error-text);
+}
+
+/* Components
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+    display: inline-block;
+    font-weight: 400;
+    width: 100%;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #0d6efd;
+    border: 1px solid transparent;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: .25rem;
+    transition: .5s ease background-color;
+    font-weight: bold;
+}
+.button:hover {
+  background-color: #2a5298;
+}
+
+/* Custom Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* -- form */
+.form {
+  margin: 10px 0;
+}
+.form__input input {
+  border: none;
+  appearance: none;
+  width: 100%;
+  background-color: var(--light-color);
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid var(--dark-border);
+  border-radius: 10px;
+  transition: .5s ease box-shadow;
+}
+
+.form__input input:focus{
+  box-shadow: 0 0 0 0.50rem rgb(13 110 253 / 25%);
+}
+/* -- Table */
+.table-bg {
+	padding: 2rem;
+	background-color: var(--light-color);
+	border-radius: 10px;
+}
+.table__title {
+	margin-bottom: 10px;
+	animation: fadeIn 0.8s forwards;
+	text-align: center;
+}
+.table-container {
+	overflow: auto;
+}
+.table {
+	table-layout: auto;
+	border-spacing: 0;
+	width: 100%;
+	border: 1px solid var(--dark-border);
+	animation: fadeIn 0.8s forwards;
+}
+
+.table td,
+.table th {
+	padding: 0.5rem;
+	border: 1px solid var(--dark-border);
+}
+
+/* -- Table__head */
+.table .table__head {
+	text-align: center;
+}
+
+.table .table__head th {
+	width: calc(100% / 6);
+	font-weight: bold;
+}
+
+/* -- Table__body */
+.table__body tr {
+	transition: background-color ease 0.5s;
+}
+
+.table__body tr:nth-child(2n + 1) {
+	background-color: var(--dark-color);
+}
+
+.table__body tr:hover {
+	background-color: skyblue;
+}
+
+/* Medias Querys
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 768px) {
+	body {
+		font-size: 1.6rem;
+    line-height: 1.5;
+
+	}
+	.table td,
+	.table th {
+		padding: 1rem;
+	}
+}
+
+/* Animations
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@keyframes fadeIn {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
