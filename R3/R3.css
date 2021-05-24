@@ -60,7 +60,7 @@ img {
 .grid {
 	display: grid;
 	gap: 2rem;
-	margin: 20px 0;
+	margin: 100px 0;
 }
 
 @media (min-width: 768px) {
@@ -90,7 +90,7 @@ img {
 .main-image__icon {
 	position: absolute;
 	top: calc(50% - 25px);
-	left: -100%;
+	left: calc(50% - 25px);
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -99,9 +99,6 @@ img {
 	justify-content: center;
 	background-color: var(--light-color);
 	transition: 0.5s ease left;
-}
-.main-image:hover .main-image__icon {
-	left: calc(50% - 25px);
 }
 
 /* -- main-description */
@@ -149,6 +146,10 @@ img {
     right: 0;
     cursor: pointer;
     border-radius: 50%;
+    transition: .5s ease transform;
+}
+.modal__video__close-icon:hover {
+    transform: rotate(180deg);
 }
 
 .modal__video video {

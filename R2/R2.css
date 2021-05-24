@@ -96,15 +96,14 @@ body {
 .table .table__head th::before,
 .table .table__head th::after {
 	position: absolute;
+	cursor: pointer;
 }
 .table .table__head th::before {
 	content: "\2191";
-	cursor: pointer;
 	right: 1.2rem;
 }
 .table .table__head th::after {
 	content: "\2193";
-	cursor: pointer;
 	right: 0.5rem;
 }
 
